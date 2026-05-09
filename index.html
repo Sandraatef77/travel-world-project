@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>travel world</title>
+    <meta name="description" content="this is my travel world site">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/27aae294f4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header flex-column">
+        <div class="topbar flex-row">
+            <div class="logo flex-row"> <i class="fa-solid fa-camera"></i><Span>travel world</Span></div>
+            <nav class="navbar flex-row">
+                <ul class="flex-row">
+                    <li><a href="#home">home</a></li>
+                    <li><a href="#destinations">destinations</a></li>
+                    <li><a href="#tours">tours</a></li>
+                    <li><a href="#about">about</a></li>
+                </ul>
+                <a href="#book-ticket" class="btn">book ticket</a>
+            </nav>
+        </div>
+        <div class="headline flex-column flex-center" id="home">
+            <h1>plan your dream vacation</h1>
+            <p>explore the world with us</p>
+            <a href="#destinations" class="btn">explore now</a>
+        </div>
+
+
+        <div class="options flex-row" id="destinations">
+            <div class="destinations flex-row flex-center">
+                <i class="fa-solid fa-earth-oceania"></i>
+                <div class="content flex-column">
+                    <h2> top destinations</h2>
+                    <p>discover the best place to visit</p>
+                </div>
+            </div>
+            <input type="checkbox" id="show-more-check" style="display: none;">
+            <div class="destinations extra-content flex-row flex-center">
+                <i class="fa-solid fa-location-dot"></i>
+                <div class="content flex-column">
+                    <h2>custom tours</h2>
+                    <p>travel world made trips just for you</p>
+                </div>
+            </div>
+            <div class="destinations extra-content flex-row flex-center">
+                <i class="fa-solid fa-handshake"></i>
+                <div class="content flex-column">
+                    <h2>best-deals</h2>
+                    <p>get amazing offers & discounts</p>
+                </div>
+            </div>
+            <label for="show-more-check" class="show-more-btn">Show More</label>
+        </div>
+    </header>
+    <section class="popular-distinations flex-column " id="tours">
+        <h2 class="highlight flex-row flex-center">popular destinations</h2>
+        <div class="tours flex-row">
+            <div class="tour-box flex-column">
+                <div class="img-container">
+                    <img src="paris.png" alt="paris" class="img">
+                </div>
+
+                <div class="cities flex-column flex-center">
+                    <h3>paris</h3>
+                    <p>city of love</p>
+                </div>
+            </div>
+
+
+            <div class="tour-box flex-column">
+                <div class="img-container">
+                    <img src="maldives.png" alt="maldives" class="img">
+                </div>
+
+                <div class="cities flex-column flex-center">
+                    <h3>maldives</h3>
+                    <p>tropical paradise</p>
+                </div>
+            </div>
+
+            <div class="tour-box flex-column ">
+                <div class="img-container">
+                    <img src="Swiss-Alps.png" alt="swiss-alps" class="img">
+                </div>
+
+                <div class="cities flex-column flex-center">
+                    <h3>swiss alps</h3>
+                    <p>mountain adventure</p>
+                </div>
+            </div>
+
+
+            <div class="tour-box flex-column">
+                <div class="img-container">
+                    <img src="kyoto.png" alt="kyoto" class="img">
+                </div>
+
+                <div class="cities flex-column flex-center">
+                    <h3>kyoto</h3>
+                    <p>culture heritage</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="about-us" id="about">
+        <h2 class="highlight flex-row flex-center">why choose us</h2>
+        <div class="our-services flex-row">
+            <div class="services-box flex-column flex-center">
+                <div class="img-container flex-center">
+                    <img src="expert-guide.png" alt="expert-guide" class="img">
+                </div>
+                <h3>expert guide</h3>
+                <p>experinced and friendly guide</p>
+            </div>
+
+            <div class="services-box flex-column flex-center">
+                <div class="img-container flex-center">
+                    <img src="affordable-prices.png" alt="affordable-prices" class="img">
+                </div>
+                <h3>affordable prices</h3>
+                <p>best value for your money</p>
+            </div>
+
+            <div class="services-box flex-column flex-center">
+                <div class="img-container flex-center">
+                    <img src="24 7 support.png" alt="24/7 support" class="img">
+                </div>
+                <h3> 24/7 support</h3>
+                <p>always here to help you</p>
+            </div>
+        </div>
+    </section>
+    <footer class="footer" id="book-ticket">
+        <h2 class="highlight flex-row flex-center">how to connect</h2>
+        <div class="flex-row flex-center links">
+            <a href="https://www.linkedin.com/in/sandra-atef-216b73215/">
+                <div class="flex-column icon-text-center ">
+                    <i class="fa-brands fa-linkedin icon-style linkedin"></i><span>linkedin</span>
+                </div>
+            </a>
+            <a href="https://github.com/Sandraatef77/git-course#">
+                <div class="flex-column icon-text-center">
+                    <i class="fa-brands fa-github icon-style "></i><span>github</span>
+                </div>
+            </a>
+            <a href="mailto:sandraatef34@gmail.com">
+                <div class="flex-column icon-text-center">
+                    <i class="fa-solid fa-envelope icon-style "></i><span>gmail</span>
+                </div>
+            </a>
+        </div>
+        <p class="copy-right flex-center">&copy; 2024 Sandra Atef. All rights reserved.</p>
+    </footer>

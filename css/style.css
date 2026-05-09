@@ -1,0 +1,309 @@
+* {
+    box-sizing: border-box;
+    text-transform: capitalize;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+}
+
+:root {
+    --btnbackground: orangered;
+    --cardbackground: wheat;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    background-image: url(../beach.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    color: white;
+    width: 100%;
+    min-height: 80vh;
+    top: 0;
+    left: 0;
+    position: relative;
+    z-index: 2;
+}
+
+.topbar {
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 1000;
+    position: fixed;
+    backdrop-filter: blur(2px);
+    padding: 0 10px;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    gap: 5px;
+    color: var(--btnbackground);
+}
+
+.navbar {
+    gap: 10px;
+    align-items: center;
+
+}
+
+.navbar ul {
+    list-style: none;
+    gap: 10px;
+    cursor: pointer;
+
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.navbar ul li a:hover {
+    color: var(--btnbackground);
+
+    transform: scale(1.1);
+    transition: .5s all ease-in-out;
+}
+
+.btn {
+    background-color: var(--btnbackground);
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+.btn:hover {
+    transition: .5s all ease-in-out;
+    transform: scale(1.1);
+}
+
+.headline {
+    flex-grow: 1;
+    gap: 10px;
+}
+
+.options {
+    justify-content: space-around;
+    flex-grow: 1;
+    position: absolute;
+    z-index: 5;
+    left: 0;
+    bottom: 5px;
+    width: 100%;
+    transform: translatey(50%);
+    display: flex;
+    transition: .5s all ease-in-out;
+}
+
+.destinations {
+    background-color: var(--cardbackground);
+    border-radius: 5px;
+    padding: 10px;
+    color: black;
+    gap: 10px;
+    /* transition: .5s all ease-in-out; */
+
+}
+
+.destinations i {
+    color: var(--btnbackground);
+}
+
+.content {
+    gap: 10px;
+}
+
+.show-more-btn {
+    display: none;
+    background-color: var(--btnbackground);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.popular-distinations {
+    padding: 10px;
+    gap: 10px;
+
+}
+
+.highlight {
+    width: 100%;
+    gap: 15px;
+    padding: 10px;
+    margin-top: 25px;
+}
+
+.highlight::after,
+.highlight::before {
+    height: 2px;
+    display: flex;
+    flex: 0.2;
+    content: "";
+    background-color: gray;
+}
+
+
+.tours,
+.our-services {
+    justify-content: space-around;
+}
+
+
+
+.tour-box,
+.services-box {
+    background-color: var(--cardbackground);
+    padding: 10px;
+    gap: 5px;
+    border-radius: 5px;
+}
+
+.img-container {
+    width: 200px;
+    height: 200px;
+    flex-shrink: 0;
+
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.footer>*:not(:first-child) {
+    background-color: var(--cardbackground);
+    padding: 10px;
+}
+
+.links {
+    gap: 15px;
+    padding: 10px;
+
+}
+
+.links a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.icon-style {
+    font-size: 30px;
+}
+
+.linkedin {
+    background-color: white;
+    color: #0A66C2;
+}
+
+.icon-text-center {
+    gap: 5px;
+    align-items: center;
+}
+
+.copy-right {
+    font-size: 18px;
+}
+
+
+
+@media (max-width: 992px) {
+
+    .tours {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .tour-box {
+        flex-basis: calc(20% - 20px);
+    }
+
+    .options {
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        transform: none;
+        gap: 20px;
+        padding: 20px;
+        flex-wrap: wrap;
+    }
+
+    .destinations {
+        flex-basis: calc(20% - 10px);
+        max-height: fit-content;
+    }
+}
+
+@media (max-width: 768px) {
+    .our-services {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .services-box {
+        flex-basis: calc(50% - 10px);
+
+    }
+
+    .options {
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        transform: none;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .destinations {
+        flex-grow: .5;
+    }
+
+    .extra-content {
+        display: none;
+
+    }
+
+    .show-more-btn {
+        display: block;
+        height: fit-content;
+        width: fit-content;
+
+    }
+}
